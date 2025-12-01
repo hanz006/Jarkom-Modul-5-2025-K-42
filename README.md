@@ -6,16 +6,67 @@
 
 # MISI 1
 ## Soal 1
-● Narya: Berfungsi sebagai DNS Server.
-● Vilya: Berfungsi sebagai DHCP Server.
-● Web Servers: Palantir dan IronHills.
-● Client (Pasukan):
-    ● Khamul: 5 host (Target/Burnice).
-    ● Cirdan: 20 host (Lycaon).
-    ● Isildur: 30 host (Policeboo).
-    ● Durin: 50 host (Caesar).
-    ● Gilgalad: 100 host (Ellen).
+● Narya: Berfungsi sebagai DNS Server. <br>
+● Vilya: Berfungsi sebagai DHCP Server. <br> 
+● Web Servers: Palantir dan IronHills. <br> 
+● Client (Pasukan): <br> 
+    ● Khamul: 5 host (Target/Burnice). <br> 
+    ● Cirdan: 20 host (Lycaon). <br> 
+    ● Isildur: 30 host (Policeboo). <br> 
+    ● Durin: 50 host (Caesar). <br> 
+    ● Gilgalad: 100 host (Ellen). <br> 
     ● Elendil: 200 host (Jane).
+    
 ## Soal 2
 <img width="2078" height="1356" alt="Frame 5" src="https://github.com/user-attachments/assets/0941f2e5-f972-41d6-b25e-b556d01568a3" />
 <img width="821" height="641" alt="Modul 5_Jarkom_K42drawio drawio" src="https://github.com/user-attachments/assets/a9b9f2b8-c063-482f-bc4d-8bcf4b3342c4" />
+
+## Soal 3
+### Osgilath
+```
+auto lo
+iface lo inet loopback
+
+auto eth0
+iface eth0 inet dhcp
+
+auto eth1
+iface eth1 inet static
+    address 192.232.1.213
+    netmask 255.255.255.252
+
+auto eth2
+iface eth2 inet static
+    address 192.232.1.217
+    netmask 255.255.255.252
+
+auto eth3
+iface eth3 inet static
+    address 192.232.1.225
+    netmask 255.255.255.252
+```
+### Moria
+```
+auto lo
+iface lo inet loopback
+
+auto eth0
+iface eth0 inet static
+    address 192.232.1.218
+    netmask 255.255.255.252
+    gateway 192.232.1.217
+
+auto eth1
+iface eth1 inet static
+    address 192.232.1.209
+    netmask 255.255.255.252
+
+auto eth2
+iface eth2 inet static
+    address 192.232.1.221
+    netmask 255.255.255.252
+
+auto eth3
+iface eth3 inet manual
+
+```
