@@ -10,7 +10,7 @@
 ● Vilya: Berfungsi sebagai DHCP Server. <br> 
 ● Web Servers: Palantir dan IronHills. <br> 
 ● Client (Pasukan): <br> 
-    ● Khamul: 5 host (Target/Burnice). <br> 
+    - Khamul: 5 host (Target/Burnice). <br> 
     ● Cirdan: 20 host (Lycaon). <br> 
     ● Isildur: 30 host (Policeboo). <br> 
     ● Durin: 50 host (Caesar). <br> 
@@ -19,6 +19,7 @@
     
 ## Soal 2
 <img width="2078" height="1356" alt="Frame 5" src="https://github.com/user-attachments/assets/0941f2e5-f972-41d6-b25e-b556d01568a3" />
+<img width="1176" height="534" alt="image" src="https://github.com/user-attachments/assets/e7ef8c22-cf4e-43b0-8f48-d6dccbce6f56" />
 <img width="821" height="641" alt="Modul 5_Jarkom_K42drawio drawio" src="https://github.com/user-attachments/assets/a9b9f2b8-c063-482f-bc4d-8bcf4b3342c4" />
 
 ## Soal 3
