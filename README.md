@@ -10,7 +10,7 @@
 ● Vilya: Berfungsi sebagai DHCP Server. <br> 
 ● Web Servers: Palantir dan IronHills. <br> 
 ● Client (Pasukan): <br> 
-    - Khamul: 5 host (Target/Burnice). <br> 
+    ● Khamul: 5 host (Target/Burnice). <br> 
     ● Cirdan: 20 host (Lycaon). <br> 
     ● Isildur: 30 host (Policeboo). <br> 
     ● Durin: 50 host (Caesar). <br> 
@@ -69,5 +69,101 @@ iface eth2 inet static
 
 auto eth3
 iface eth3 inet manual
+```
+### Wilderland
+```
+auto lo
+iface lo inet loopback
+
+auto eth0
+iface eth0 inet static
+    address 192.232.1.222
+    netmask 255.255.255.252
+    gateway 192.232.1.221
+
+auto eth1
+iface eth1 inet static
+    address 192.232.1.129
+    netmask 255.255.255.192
+
+auto eth2
+iface eth2 inet static
+    address 192.232.1.193
+    netmask 255.255.255.248
+```
+### Rivendell
+```
+auto lo
+iface lo inet loopback
+
+auto eth0
+iface eth0 inet static
+    address 192.232.1.214
+    netmask 255.255.255.252
+    gateway 192.232.1.213
+
+auto eth1
+iface eth1 inet static
+    address 192.232.1.201
+    netmask 255.255.255.248
+```
+### Minastir
+```
+auto lo
+iface lo inet loopback
+
+auto eth0
+iface eth0 inet static
+    address 192.232.1.226
+    netmask 255.255.255.252
+    gateway 192.232.1.225
+
+auto eth1
+iface eth1 inet static
+    address 192.232.0.1
+    netmask 255.255.255.0
+
+auto eth2
+iface eth2 inet static
+    address 192.232.1.229
+    netmask 255.255.255.252
+```
+### Pelargir
+```
+auto lo
+iface lo inet loopback
+
+auto eth0
+iface eth0 inet static
+    address 192.232.1.230
+    netmask 255.255.255.252
+    gateway 192.232.1.229
+
+auto eth1
+iface eth1 inet static
+    address 192.232.1.237
+    netmask 255.255.255.252
+
+auto eth2
+iface eth2 inet static
+    address 192.232.1.233
+    netmask 255.255.255.252
+
+```
+### AnduinBanks
+```
+auto lo
+iface lo inet loopback
+
+auto eth0
+iface eth0 inet static
+    address 192.232.1.238
+    netmask 255.255.255.252
+    gateway 192.232.1.237
+
+auto eth1
+iface eth1 inet static
+    address 192.232.1.1
+    netmask 255.255.255.128
 
 ```
