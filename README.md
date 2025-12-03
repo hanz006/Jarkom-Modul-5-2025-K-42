@@ -22,7 +22,6 @@
 <img width="1176" height="534" alt="image" src="https://github.com/user-attachments/assets/e7ef8c22-cf4e-43b0-8f48-d6dccbce6f56" />
 <img width="821" height="641" alt="Modul 5_Jarkom_K42drawio drawio" src="https://github.com/user-attachments/assets/a9b9f2b8-c063-482f-bc4d-8bcf4b3342c4" />
 
-## Soal 3
 ### Osgilath
 ```
 auto lo
@@ -165,5 +164,35 @@ auto eth1
 iface eth1 inet static
     address 192.232.1.1
     netmask 255.255.255.128
+```
 
+## soal 3
+Buatlah file konfirgurasi rute pada node node berikut
+### Osgilath
+```
+#!/bin/bash
+ip route add 192.232.1.208/30 via 192.232.1.218
+ip route add 192.232.1.220/30 via 192.232.1.218
+ip route add 192.232.1.128/26 via 192.232.1.218
+ip route add 192.232.1.192/29 via 192.232.1.218
+
+ip route add 192.232.1.200/29 via 192.232.1.214
+
+ip route add 192.232.0.0/24 via 192.232.1.226
+ip route add 192.232.1.0/25 via 192.232.1.226
+ip route add 192.232.1.228/30 via 192.232.1.226
+ip route add 192.232.1.232/30 via 192.232.1.226
+ip route add 192.232.1.236/30 via 192.232.1.226
+```
+### Minastir
+```
+#!/bin/bash
+ip route add 192.232.1.232/30 via 192.232.1.230
+ip route add 192.232.1.236/30 via 192.232.1.230
+ip route add 192.232.1.0/25   via 192.232.1.230
+```
+### Pelargir
+```
+#!/bin/bash
+ip route add 192.232.1.0/25 via 192.232.1.238
 ```
