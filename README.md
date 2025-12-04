@@ -165,6 +165,14 @@ iface eth1 inet static
     address 192.232.1.1
     netmask 255.255.255.128
 ```
+### Elendil, Isildur, Gilgalad, Cirdan
+```
+auto lo
+iface lo inet loopback
+
+auto eth0
+iface eth0 inet dhcp
+```
 
 ## soal 3
 Buatlah file konfirgurasi rute pada node node berikut
