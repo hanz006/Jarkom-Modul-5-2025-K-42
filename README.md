@@ -196,3 +196,12 @@ ip route add 192.232.1.0/25   via 192.232.1.230
 #!/bin/bash
 ip route add 192.232.1.0/25 via 192.232.1.238
 ```
+
+# Misi 2
+## Soal 1
+Gunakan config di bawah pada node `Osgilath` untuk menghubungkan ke `NAT`
+```
+echo 1 > /proc/sys/net/ipv4/ip_forward
+iptables -t nat -A POSTROUTING -s 192.232.0.0/23 -o eth0 -j SNAT --to-source 192.168.122.72
+
+```
