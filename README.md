@@ -256,6 +256,8 @@ service isc-dhcp-server status
 ```
 Pastikan outputnya `active (running)`
 
+### Minastir, ArduinBanks, Wilderland
+
 # Misi 2
 ## Soal 1
 Gunakan config di bawah pada node `Osgilath` untuk menghubungkan ke `NAT`
