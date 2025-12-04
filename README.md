@@ -197,6 +197,65 @@ ip route add 192.232.1.0/25   via 192.232.1.230
 ip route add 192.232.1.0/25 via 192.232.1.238
 ```
 
+## Soal 4 (Setelah 2.1)
+### Vilya
+`Vilya` akan berpaeran sebagai DHCP Server. Pastikan `Vilya` dapat mengakses internet dengan `ping 8.8.8.8` setelah itu tambahkan DNS Resolver
+```
+nano /etc/resolv.conf
+```
+isi dengan
+```
+nameserver 8.8.8.8
+nameserver 1.1.1.1
+```
+Sehabis itu barulah update dan install DHCP Server
+```
+apt-get update
+apt-get install isc-dhcp-server -y
+```
+Set intefaces dari DHCP Server dengan
+```
+nano /etc/default/isc-dhcp-server
+```
+dan isi seperti berikut
+```
+INTERFACESv4="eth0"
+INTERFACESv6=""
+```
+lalu edit file DHCP Server dengan
+```
+nano /etc/dhcp/dhcpd.conf
+```
+isi dengan
+```
+authoritative;
+
+# SUBNET TEMPAT VILYA BERADA (WAJIB ADA & KOSONG)
+subnet 192.232.1.200 netmask 255.255.255.248 {
+}
+
+# ===== A9 SUBNET =====
+subnet 192.232.0.0 netmask 255.255.255.0 {
+    range 192.232.0.10 192.232.0.200;
+    option routers 192.232.0.1;
+    option broadcast-address 192.232.0.255;
+    option domain-name-servers 192.232.1.203;
+}
+
+# ===== A13 SUBNET =====
+subnet 192.232.1.0 netmask 255.255.255.128 {
+    range 192.232.1.10 192.232.1.120;
+    option routers 192.232.1.1;
+    option broadcast-address 192.232.1.127;
+    option domain-name-servers 192.232.1.203;
+```
+Setelah melakukan semua config di atas, restart DHCP Server dan cek statusnya dengan
+```
+service isc-dhcp-server restart
+service isc-dhcp-server status
+```
+Pastikan outputnya `active (running)`
+
 # Misi 2
 ## Soal 1
 Gunakan config di bawah pada node `Osgilath` untuk menghubungkan ke `NAT`
