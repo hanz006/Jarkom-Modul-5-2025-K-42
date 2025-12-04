@@ -266,6 +266,30 @@ service isc-dhcp-server status
 Pastikan outputnya `active (running)`
 
 ### Minastir, ArduinBanks, Wilderland
+Tiga node ini berperan sebagai DHCP Relay
+```
+nano /etc/resolv.conf
+
+nameserver 8.8.8.8
+nameserver 1.1.1.1
+```
+Setelah itu update dan install relay
+```
+apt-get update
+apt-get install isc-dhcp-relay -y
+```
+konfirgurasi relay
+```
+nano /etc/default/isc-dhcp-relay
+
+SERVERS="192.232.1.202"
+INTERFACES="eth0 eth1 eth2 eth3"
+OPTIONS=""
+```
+restart relay
+```
+service isc-dhcp-relay restart
+```
 
 # Misi 2
 ## Soal 1
@@ -273,5 +297,5 @@ Gunakan config di bawah pada node `Osgilath` untuk menghubungkan ke `NAT`
 ```
 echo 1 > /proc/sys/net/ipv4/ip_forward
 iptables -t nat -A POSTROUTING -s 192.232.0.0/23 -o eth0 -j SNAT --to-source 192.168.122.72
-
 ```
+`chmod +x nat.sh` beri permission run
