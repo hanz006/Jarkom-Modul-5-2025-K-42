@@ -256,6 +256,7 @@ subnet 192.232.1.0 netmask 255.255.255.128 {
     option routers 192.232.1.1;
     option broadcast-address 192.232.1.127;
     option domain-name-servers 192.232.1.203;
+}
 ```
 Setelah melakukan semua config di atas, restart DHCP Server dan cek statusnya dengan
 ```
